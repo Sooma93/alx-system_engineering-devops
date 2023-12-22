@@ -1,4 +1,4 @@
-!#/usr/bin/env bash 
+#!/usr/bin/env bash 
 # display file
 #display infinity and beyond and i hate the kill command and y love me
 echo $$ >> /var/run/myscript.pid
