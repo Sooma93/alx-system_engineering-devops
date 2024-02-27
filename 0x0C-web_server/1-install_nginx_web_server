@@ -1,15 +1,7 @@
 #!/usr/bin/env bash
 # install ngix server
-apt-get update
-apt-get -y install nginx
-
-
-echo "Hello World!" > /var/www/html/index.html
-
-state=$(pgrep nginx)
-if [ -n "$state" ];
-then
-	sudo service nginx start
-else
-	sudo service nginx restart
-fi
+sudo apt-get -y update
+sudo apt-get -y upgrade
+sudo apt-get -y install nginx
+sudo echo "Hello World" > /usr/share/nginx/html/index.html
+sudo service nginx restart
