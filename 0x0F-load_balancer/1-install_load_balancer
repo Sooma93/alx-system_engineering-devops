@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+## Create a script to install and configure HAProxy on lb-01 server
 ckage list and install HAProxy
 sudo apt-get update
 sudo apt-get install -y haproxy
