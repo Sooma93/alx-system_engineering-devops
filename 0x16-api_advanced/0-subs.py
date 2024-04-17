@@ -1,18 +1,20 @@
 #!/usr/bin/python3
 """
-api rediernt
+api redient
 """
 
 import requests
 
+
 def number_of_subscribers(subreddit):
-    # Set a custom User-Agent to avoid Too Many Requests error
-    headers = {'User-Agent': 'MyBot/1.0'}
-    response = requests.get(f'https://www.reddit.com/r/{subreddit}/about.json', headers=headers)
-    
+    """
+    function redor=ent query
+    """
+    url = "https://www.reddit.com/r/{}/about.json".format(subreddit)
+    response = requests.get(url,  headers={"User-Agent": "Custom"})
     if response.status_code == 200:
         data = response.json()
-        subscribers = data['data']['subscribers']
+        subscribers = data.get('data').get('subscribers')
         return subscribers
     else:
         return 0
